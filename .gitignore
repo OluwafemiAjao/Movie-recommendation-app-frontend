@@ -22,15 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-
-# Development
-VITE_TMDB_API_KEY=d7ac09c9c5c7c8cbe856bf8e51570dac
-VITE_TMDB_BASE_URL=https://api.themoviedb.org/3
-VITE_BACKEND_URL=http://localhost:5000/api 
-
-# Important: Vite prefix is VITE_. Access in code via import.meta.env.VITE_TMDB_API_KEY.
-
-
-
-# Production
