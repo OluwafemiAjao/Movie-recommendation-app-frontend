@@ -46,6 +46,7 @@ AuthContext provides global state for authentication and user data.
 
 Protected routes using PrivateRoute.
 
+
 🏠 Core Pages
 
 Home: Displays hero banner, popular/trending movies, and TV sections.
@@ -66,6 +67,7 @@ Login / Register: Authentication entry points.
 
 NotFound: 404 fallback page.
 
+
 🎨 Components
 
 Navbar: Navigation with dynamic login/logout links (uses AuthContext).
@@ -84,11 +86,13 @@ Watchlist: Displays saved watchlist items.
 
 PrivateRoute: Guards protected routes (favorites, profile, etc.).
 
+
 🛠️ Hooks
 
 useFavorites: Custom hook to manage favorites (add/remove).
 
 useWatchlist: Custom hook to manage watchlist.
+
 
 🌐 Services (API Layer)
 
@@ -268,7 +272,7 @@ After deployment, update README with:
 
 ⚙️ Backend (Render): https://movie-recommendation-app-backend-4ghi.onrender.com
 
-🌐 Frontend (Vercel): https://starflix.vercel.app
+🌐 Frontend (Vercel): https://starflix-beta.vercel.app
 
 
 📂 Folder Structure
@@ -364,7 +368,7 @@ to app.jsx (it needs BrowserRouter as Router, Routes, and Route from module - re
 to main.jsx (it needs ReactDOM from module- react-dom/client, AuthProvider from AuthContext in context, app.jsx, and index.css)
 to index.html
 to README
-to deploying.
+to deploying / deployment configuration.
 
 
 1️⃣ Clone Repository
@@ -438,7 +442,7 @@ App runs at: http://localhost:5173
 
 
 Other things to note
-There is the windows and linux differentiation. You can be running your code using linux Unix, windows poweshell, or linux extension on windows. For example in frontend, the PowerShell Equivalent to rm -rf node_modules package-lock.json on unix (which is for deleting both the node_modules folder and the package-lock.json file, just like rm -rf on Unix/macOS.) is Remove-Item -Recurse -Force node_modules, package-lock.json.
+There is the windows and linux differentiation. You can be running your code using linux Unix, windows powershell, or linux extension on windows. For example in frontend, the PowerShell Equivalent to rm -rf node_modules package-lock.json (which is for deleting both the node_modules folder and the package-lock.json file, just like rm -rf on Unix/macOS.) on unix is Remove-Item -Recurse -Force node_modules, package-lock.json.
 
 In package.json, in the metadata block, setting type as module (which is ESM projects standard) is if you want to adopt "export default" / "import", while not setting it (which is common JS tools) by removing it, not commenting it out is if you want to adopt "module.exports". In addition, if you remove it and you are adopting tailwind css, you have to make modify your tailwind.config.js file.
 
@@ -465,7 +469,7 @@ Then re-run: npm run dev
 ⚠️ Note: Option 1 is preferred for clarity and convention (keep .jsx files named correctly). Option 2 is good if you want to be flexible or are dealing with legacy structure.
 
 
-Both your frontend and backend must run simultaneously during connection of frontend to backend phase
+Both your frontend and backend must run simultaneously during the phase of connection of frontend to backend. 
 It should also be noted that you are to deploy your backend first before your frontend.
 
 
@@ -494,6 +498,7 @@ All auth, favorites, watchlist, reviews, and profile features use the backend AP
 Movies, TV shows, genres, and search are powered by TMDB API.
 
 Axios interceptors automatically attach JWT tokens to authenticated requests.
+
 
 🛠️ Notes & Design
 
